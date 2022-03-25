@@ -3,6 +3,8 @@
 
         <section class="col-3">
 
+        <ng-container *ngIf="this.types && this.brands">
+
             <h5 class="text-primary ml-3">Sort</h5>
             <select class="custom-select mb-3" (change)="onSortSelected($event.target.value)">
                 <option selected *ngFor="let sort of sortOptions"
@@ -38,6 +40,7 @@
 
               </ul>
 
+            </ng-container>
         </section>
 
         <section class="col-9">
@@ -50,7 +53,7 @@
                 >
                 </app-paging-header>
 
-                <div class="form-inline mt-2">
+                <div class="form-inline mt-2" *ngIf="this.products">
                     <input (keyup.enter)="this.onSearch()" class="form-control mr-2" #search style="width: 300px;" placeholder="Search" type="text">
 
                     <button (click)="this.onSearch()" class="btn btn-outline-primary my-2">Search</button>

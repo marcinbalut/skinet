@@ -13,8 +13,6 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
 
-      delay(1000), // artificial delay for tests
-
       catchError(error => {
         if (error) {
           if (error.status === 400) {
