@@ -3,7 +3,7 @@
 
         <section class="col-3">
 
-            <h5 class="text-warning ml-3">Sort</h5>
+            <h5 class="text-primary ml-3">Sort</h5>
             <select class="custom-select mb-3" (change)="onSortSelected($event.target.value)">
                 <option selected *ngFor="let sort of sortOptions"
                     [value]="sort.value"
@@ -13,7 +13,7 @@
             </select>
 
 
-            <h5 class="text-warning ml-3">Brands</h5>
+            <h5 class="text-primary ml-3">Brands</h5>
             <ul class="list-group my-3">
                 <li class="list-group-item" 
                     *ngFor="let brand of brands"
@@ -25,7 +25,7 @@
                 </li>
             </ul>
 
-            <h5 class="text-warning ml-3">Types</h5>
+            <h5 class="text-primary ml-3">Types</h5>
             <ul class="list-group my-3">
                 <li class="list-group-item" 
                     *ngFor="let type of types"
