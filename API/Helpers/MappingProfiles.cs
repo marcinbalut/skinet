@@ -8,7 +8,10 @@ namespace API.Helpers
     {
         public MappingProfiles()
         {
-            CreateMap<Product, ProductToReturnDto>();
+            CreateMap<Product, ProductToReturnDto>()
+                .ForMember(d => d.ProductBrand, opt => opt.MapFrom(s => s.ProductBrand.Name))
+                .ForMember(d => d.ProductType, opt => opt.MapFrom(s => s.ProductType.Name))
+                .ForMember(d => d.PictureUrl, opt => opt.MapFrom<ProductUrlResolver>());
         }
     }
 }
