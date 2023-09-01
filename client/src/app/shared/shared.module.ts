@@ -43,7 +43,8 @@ import { RouterModule } from '@angular/router';
     BsDropdownModule,
     TextInputComponent,
     StepperComponent,
-    CdkStepperModule
+    CdkStepperModule,
+    BasketSummaryComponent
   ]
 })
 export class SharedModule { }
