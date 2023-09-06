@@ -20,8 +20,6 @@ namespace Infrastructure.Services
 
         public async Task<CustomerBasket> CreateOrUpdatePaymentIntent(string basketId)
         {
-            string fakeApiKey = _config["PaymentSettings:FakeSecretKey"];
-
             var basket = await _basketRepository.GetBasketAsync(basketId);
             var shippingPrice = 0m;
 
